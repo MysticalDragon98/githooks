@@ -2,8 +2,8 @@ import IBitbucketPushWebhook from "../../../interfaces/bitbucket-push-webhook.in
 import findProjectConfig from "../../../modules/router/findProjectConfig";
 import executeBranchCommand from "../../../modules/sh/executeBranchCommand";
 
-export default async function notifyHTTPEndpoint (push: IBitbucketPushWebhook, $request: any) {
-    const projectConfig = await findProjectConfig(push.repository.name);
+export default async function notifyHTTPEndpoint (push: IBitbucketPushWebhook, repository: IBitbucketPushWebhook["repository"], $request: any) {
+    const projectConfig = await findProjectConfig(repository.name);
     const branch = projectConfig.branches[push.changes[0].new.name];
 
     if (!branch || !branch.cmd) return {
