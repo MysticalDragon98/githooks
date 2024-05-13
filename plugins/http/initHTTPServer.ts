@@ -1,8 +1,10 @@
 import { Server } from "@olptools/http-server";
 import { $HTTP_PORT } from "../../lib/env";
+import webhooks from "../../lib/http/endpoints/webhooks/index";
 //* Imports
 
 const Endpoints = {
+    webhooks,
     //* Endpoints
 }
 
