@@ -1,8 +1,10 @@
 //* Imports
 
+import { initHTTPServer } from "./plugins/http/initHTTPServer";
+
 async function main () {
     await Promise.all([
-        //* Main
+        initHTTPServer()
     ]);
 
     //* Post Main
