@@ -14,6 +14,8 @@ export default async function findProjectConfig (projectName: string) {
         const folderPath = normalizePath(folder);
         const filepath = join(folderPath, projectName, ".toml");
 
+        console.log(filepath)
+
         if (!await fileExists(filepath)) continue;
 
         return normalizeProjectConfig(await readTomlFile(filepath));
