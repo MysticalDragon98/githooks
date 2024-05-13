@@ -2,6 +2,7 @@ import { log } from "termx";
 import IBitbucketPushWebhook from "../../../interfaces/bitbucket-push-webhook.interface";
 import findProjectConfig from "../../../modules/router/findProjectConfig";
 import executeBranchCommand from "../../../modules/sh/executeBranchCommand";
+import generateJobTempFile from "../../../modules/fs/generateJobTempFile";
 
 export default async function notifyHTTPEndpoint (push: IBitbucketPushWebhook, repository: IBitbucketPushWebhook["repository"], $request: any) {
     const projectConfig = await findProjectConfig(repository.name);
@@ -26,9 +27,15 @@ export default async function notifyHTTPEndpoint (push: IBitbucketPushWebhook, r
         }
     }
 
-    executeBranchCommand(branch.cmd, projectConfig.dir);
+    const logfile =  generateJobTempFile();
+    executeBranchCommand(
+        branch.cmd,
+        projectConfig.dir,
+        logfile
+    );
 
-    log("Webhook executed for branch: " + push.changes[0].new.name);
+    log("Webhook executed for branch: " + push.changes[0].new.name + " with command: " + branch.cmd);
+    log("Output can be found in: " + logfile);
     return {
         success: true,
         message: "Webhook executed for branch: " + push.changes[0].new.name
