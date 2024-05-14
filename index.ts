@@ -13,7 +13,7 @@ if ($DD_APIKEY && $DD_APPNAME && $DD_HOST) {
         host: $DD_HOST
     }))
 
-    createModuleInspector("MAIN").method("start").log({ type: "success" })
+    createModuleInspector("MAIN").method("datadog:setup").log({ type: "success" })
 }
 
 async function main () {
