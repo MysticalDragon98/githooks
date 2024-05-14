@@ -86,7 +86,7 @@ export default async function notifyHTTPEndpoint (push: IBitbucketPushWebhook, r
                 message: err.message,
                 logfile
             }
-        }
+        });
     });
 
     logger.log({
