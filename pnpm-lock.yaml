@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@coretools/http-server':
-        specifier: ^1.0.0-a
-        version: 1.0.0
+        specifier: 1.0.0-a
+        version: 1.0.0-a
       chalk:
         specifier: '4'
         version: 4.1.2
@@ -36,8 +36,8 @@ importers:
 
 packages:
 
-  '@coretools/http-server@1.0.0':
-    resolution: {integrity: sha512-QY8jg5QNlwfftznX+JPINmMUqhRqufA6btKmPniNO14BWvUSZ1VTk3+aBDnMyx9bEugmcJ8UoZrkUmtZHhelzQ==}
+  '@coretools/http-server@1.0.0-a':
+    resolution: {integrity: sha512-kOXPn1/zBK0zGSY7d/gp3/6VjMTbLg0hhRwrMekB9SVtH9y5es7FC3wOHHPCFxGU9j7LFIgXabUT6crhuYmwNg==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -574,7 +574,7 @@ packages:
 
 snapshots:
 
-  '@coretools/http-server@1.0.0':
+  '@coretools/http-server@1.0.0-a':
     dependencies:
       '@mysticaldragon/logger': 1.0.6
       '@mysticaldragon/utils': 1.0.9
