@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@olptools/http-server": "1.0.0-c",
+    "@coretools/http-server": "^1.0.0",
     "dotenv": "^16.3.1",
     "termx": "^1.2.5",
     "toml": "^3.0.0"
