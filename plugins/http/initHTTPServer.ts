@@ -11,7 +11,8 @@ const Endpoints = {
 export async function initHTTPServer () {
     const server = new Server({
         endpoints: Endpoints,
-        port: $HTTP_PORT
+        port: $HTTP_PORT,
+        
     });
 
     //* Plugins

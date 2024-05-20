@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@coretools/http-server':
-        specifier: ^1.0.0
+        specifier: ^1.0.0-a
         version: 1.0.0
       chalk:
         specifier: '4'
