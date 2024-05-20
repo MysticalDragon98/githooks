@@ -11,6 +11,9 @@ importers:
       '@coretools/http-server':
         specifier: ^1.0.0
         version: 1.0.0
+      chalk:
+        specifier: '4'
+        version: 4.1.2
       dotenv:
         specifier: ^16.3.1
         version: 16.4.5
