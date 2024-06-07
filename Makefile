@@ -1,10 +1,10 @@
 start:
-	pnpm start
+	npm start
 
 build:
-	pnpm build
+	npm build
 
 update:
 	git pull
-	pnpm install
-	pnpm build
+	npm install
+	npm build
