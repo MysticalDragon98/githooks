@@ -1,8 +1,8 @@
+default:
+	npm build
+
 start:
 	npm start
-
-build:
-	npm build
 
 update:
 	git reset --hard
