@@ -36,8 +36,7 @@ export default async function notifyHTTPEndpoint (push: IBitbucketPushWebhook, r
 
     executeBranchCommand(
         branch.cmd,
-        projectConfig.dir,
-        logfile
+        projectConfig.dir
     );
 
     log(StyleOK(), "Webhook executed for branch: " + push.changes[0].new.name + ". Logfile: " + logfile);
